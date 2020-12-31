@@ -1,0 +1,31 @@
+<!--pages/my/index.wxml-->
+<view class="container">
+  <image src="/images/my@bg.png" class="bg"></image>
+  <!-- <open-data type="userAvatarUrl" class="avatar avatar-position"></open-data> -->
+  <button-c wx:if="{{!authorized}}" class="avatar-position" open-type="getUserInfo" bindgetUserInfo="onGetUserInfo">
+    <image slot="img" class="avatar" src="/images/my.png"></image>
+  </button-c>
+  <view wx:if="{{authorized}}" class="avatar-container avatar-position">
+    <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view class="about-container">
+    <view bindtap="onJumpToAbout" class="about-us">
+      <image src="/images/about.png"></image>
+      <text class="description">关于我们</text>
+    </view>
+    <view class="about-us">
+      <text class="book-num">{{bookCount}}</text>
+      <text class="description">喜欢的书</text>
+    </view>
+  </view>
+  <view class="like-container">
+    <image class="headline" src="/images/like.png"></image>
+    <view class="preview-container">
+      <block wx:for="{{classic}}" wx:key="id">
+          <preview-c class="preview" classic="{{item}}"></preview-c>
+      </block>
+    </view>
+  </view>
+</view>
+<image bindtap="onStudy" class="study" src="/images/study.png"></image>

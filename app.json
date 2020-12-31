@@ -1,14 +1,46 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/classic/classic",
+    "pages/book/index",
+    "pages/my/index",
+    "pages/book-detail/book-detail",
+    "pages/about/about",
+    "pages/course/course"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "浮生",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#c7c7c7",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "selectedIconPath": "/images/tab/classic@highlight.png",
+        "pagePath": "pages/classic/classic",
+        "text": "流行",
+        "iconPath": "/images/tab/classic.png"
+      },
+      {
+        "selectedIconPath": "/images/tab/book@highlight.png",
+        "pagePath": "pages/book/index",
+        "text": "书籍",
+        "iconPath": "/images/tab/book.png"
+      },
+      {
+        "selectedIconPath": "/images/tab/my@highlight.png",
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "/images/tab/my.png"
+      }
+    ]
+  }
 }

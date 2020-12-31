@@ -1,0 +1,6 @@
+<!--pages/classic/components/essay/index.wxml-->
+<view hidden="{{hidden}}" class="content">
+  <image  src="{{img}}"></image>
+  <image src="images/诗句.png"></image>
+  <text>{{content}}</text>
+</view>

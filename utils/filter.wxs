@@ -1,0 +1,15 @@
+//不能使用ES6语法
+//正则，转义
+var format = function(text = ""){
+  var reg = getRegExp('\\\\n','g')  //正则表达式里面每个\都会被转义，所以在加一个\转义它为普通的\，g表示全局匹配
+  return text.replace(reg,'\n&nbsp;&nbsp;&nbsp;&nbsp;') //这儿不需要转义，他会当作普通字符串
+}
+
+//分页，数据截取
+var limit = function(array,length){
+  return array.slice(0,length)
+}
+module.exports = {
+  format:format,
+  limit:limit
+}

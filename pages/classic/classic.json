@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "like-c":"/components/like/index",
+    "epsoide-c":"/components/epsoide/index",
+    "navi-c":"/components/navi/index",
+    "button-c":"/components/image-button/index",
+    "movie-c":"components/movie/index",
+    "music-c":"components/music/index",
+    "essay-c":"components/essay/index"
+  }
+}

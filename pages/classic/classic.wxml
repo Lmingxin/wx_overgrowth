@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="header">
+    <epsoide-c class="epsoide" index="{{classic.index}}"></epsoide-c>
+    <view class="like-container">
+      <like-c class="like" bind:like="onLike" like="{{likeStatus}}" count="{{likeCount}}"></like-c>
+      <button-c class="share-btn" open-type="share">
+        <image class="share" slot="img" src="/images/书单-详情-分享@2x.png"></image>
+      </button-c>
+    </view>
+  </view>
+  <movie-c hidden="{{classic.type!=100}}" class="movie" img="{{classic.image}}" content="{{classic.content}}"></movie-c>
+  <music-c wx:if="{{classic.type==200}}" class="movie" img="{{classic.image}}" title="{{classic.title}}"
+    src="{{classic.url}}" content="{{classic.content}}"></music-c>
+  <essay-c hidden="{{classic.type!=300}}" class="movie" img="{{classic.image}}" content="{{classic.content}}"></essay-c>
+  <navi-c bind:left="onNext" bind:right="onPervious" class="navi" title="{{classic.title}}" latest="{{latest}}"
+    first="{{first}}"></navi-c>
+</view>

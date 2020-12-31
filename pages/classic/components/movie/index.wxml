@@ -1,0 +1,6 @@
+<!--components/movie/index.wxml-->
+<view hidden="{{hidden}}" class="content">
+  <image  src="{{img}}"></image>
+  <image src="images/电影。@2x.png"></image>
+  <text>{{content}}</text>
+</view>

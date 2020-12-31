@@ -1,0 +1,19 @@
+<!--pages/book/index.wxml-->
+
+<view class="container" wx:if="{{!searching}}">
+  <view class="header">
+    <view class="box" bindtap="onSearch">
+      <image src="/images/搜索@2x.png"></image>
+      <text>搜索书籍</text>
+    </view>
+  </view>
+  <view class="sub-container">
+    <image class="head-img" src="/images/精选@2x.png"></image>
+    <view class="book-container">
+      <block wx:for="{{books}}" wx:key="id">
+        <book-c book="{{item}}"></book-c>
+      </block>
+    </view>
+  </view>
+</view>
+<search-c more="{{more}}" bindcancel="onCancel" wx:else></search-c>
